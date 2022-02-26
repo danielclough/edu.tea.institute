@@ -1,5 +1,12 @@
-import setupHome from 'pages/home.js';
+import setupHome from 'pages/home/home.js';
+import intro from 'pages/home/intro.js';
+import otherTeas from 'pages/home/other-teas.js';
+import questions from 'pages/home/questions.js';
+import serving from 'pages/home/serving.js';
+import subTopics from 'pages/home/sub-topics.js';
+
 import setupDemo from 'pages/demo.js';
+
 import setupSearch from 'components/search.js';
 import setupHovers from 'components/hover.js';
 import setupPrefetch from 'components/prefetch.js';
@@ -38,6 +45,12 @@ function setup() {
 
 	if( PAGE_ID === 'home' ) {
 		setupHome();
+		intro();
+		otherTeas();
+		questions();
+		serving();
+		subTopics();
+		
 		setupSearch();
 	}
 	else if( PAGE_ID === 'demo' ) {
@@ -81,8 +94,8 @@ function setupInlineDecks() {
 		}
 
 		let deck = new Reveal( deckElement, {
-			width: 900,
-			height: 500,
+			width: 1920,
+			height: 1080,
 			hash: false,
 			respondToHashChanges: false,
 			embedded: true,
