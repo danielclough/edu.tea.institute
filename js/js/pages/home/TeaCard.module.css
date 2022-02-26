@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.langTitle {
+  margin-bottom: -10px;
+}
+.langLg {
+  font-size: 80%;
+}
+.langSm {
+  font-size: 70%;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+}
+.teaCard {
+  background-color: rgba(222,222,222,.2);
+  width: 100%;
+  display: block;
+  height: auto;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 1px, 2px, 3px, teal;
+}
+
+.nameContainer {
+  background-color: rgba(222,222,222,.2);
+  width: 30%;
+  padding: 1rem;
+  box-shadow: 1px, 2px, 3px, teal;
+}
+.overviewContainer {
+  background-color: rgba(222,222,222,.2);
+  width: 40%;
+  padding: 1rem;
+  box-shadow: 1px, 2px, 3px, teal;
+}
+.brewingContainer {
+  background-color: rgba(222,222,222,.2);
+  width: 30%;
+  padding: 1rem;
+  box-shadow: 1px, 2px, 3px, teal;
+}
+.historyContainer {
+  width: 100%;
+  padding: 1rem;
+  justify-content: space-around;
+  display: flex;
+}
+.topContainer {
+  display: flex;
+}
+
+span {
+  font-size: 80%;
+}
