@@ -1,209 +1,184 @@
-const serving = {
-    "people": 60,
-    "servingPerFlavor": {
-        "cupSize": 3,
-        "fill": 0.8
+const teas = [
+{
+    "name": {
+        "english": "Hojicha",
+        "chinese": "焙茶",
+        "pinyin": "bèi chá",
+        "japanese": ["ほうじ茶"],
+        "romanji": "Hōjicha"
     },
-    "teas": [
-        {
-            "name": {
-                "english": "Hojicha",
-                "chinese": "焙茶",
-                "pinyin": "bèi chá",
-                "japanese": ["ほうじ茶"],
-                "romanji": "Hōjicha"
-            },
-            "overview": {
-                "style": ["Roasted", "Green"],
-                "description": [
-                    "Roasting lower quality and old tea renews it's vitality and develops flavor and aroma."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?tea", "random"],
-            },
-            "brewing": {
-                "withEquipment": ["tea cup", "brew basket"],
-                "style": ["simple"],
-                "description": [
-                    "Brewing with realitivly long steeps yields a simple experience."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?teacup", "random"],
-                "servingSizeGramsTsp": [1.5, 1],
-                "brewingTempF": [205, 212],
-                "waterMl": 250,
-                "numberOfBrews": 2,
-                "concatArrToStingSeconds": [180, 180]
-            },
-            "equipment": {}
-        },
-        {
-            "name": {
-                "english": "Sencha",
-                "chinese": "煎茶",
-                "pinyin": "jiānchá",
-                "japanese": ["煎茶"],
-                "romanji": "sencha"
-            },
-            "overview": {
-                "style": "Green",
-                "description": [
-                    "Early season unshaded steamed green tea from Japan."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?tea", "random"],
-            },
-            "brewing": {
-                "withEquipment": ["tea cup", "brew basket"],
-                "style": ["simple"],
-                "description": [
-                    "Brewing with realitivly long steeps yields a simple experience."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?teacup", "random"],
-                "servingSizeGramsTsp": [1.5, 1],
-                "brewingTempF": [165, 175],
-                "waterMl": 250,
-                "numberOfBrews": 3,
-                "concatArrToStingSeconds": [30, 45, 60]
-            },
-            "equipment": {}
-        },
-        {
-            "name": {
-                "english": "Yancha",
-                "chinese": "岩茶",
-                "pinyin": "yān chá",
-                "japanese": ["ヤンチャ"],
-                "romanji": "yancha"
-            },
-            "overview": {
-                "style": "",
-                "description": [
-                    "Roasted wulong from the Wuyi Mountains of Fujian, China."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?tea", "random"],
-            },
-            "brewing": {
-                "withEquipment": ["tea cup", "brew basket"],
-                "style": ["simple"],
-                "description": [
-                    "Brewing with realitivly long steeps yields a simple experience."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?teacup", "random"],
-                "servingSizeGramsTsp": [7],
-                "brewingTempF": [212],
-                "waterMl": 250,
-                "numberOfBrews": 4,
-                "concatArrToStingSeconds": [300, 300]
-            },
-            "equipment": {}
-        },
-        {
-            "name": {
-                "english": "Barley Tea (Tisane)",
-                "chinese": "",
-                "pinyin": "",
-                "japanese": [""],
-                "romanji": ""
-            },
-            "overview": {
-                "style": "",
-                "description": [
-                    "Non-caffinated herbal tea that is often roasted, Where?."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?tea", "random"],
-            },
-            "brewing": {
-                "withEquipment": ["tea cup", "brew basket"],
-                "style": ["simple"],
-                "description": [
-                    "Brewing with realitivly long steeps yields a simple experience."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?teacup", "random"],
-                "servingSizeGramsTsp": [7],
-                "brewingTempF": [212],
-                "waterMl": 250,
-                "numberOfBrews": 4,
-                "concatArrToStingSeconds": [60, 120, 180, 360]
-            },
-            "equipment": {}
-        },
-        {
-            "name": {
-                "english": "Buckwheat Tea",
-                "chinese": "",
-                "pinyin": "",
-                "japanese": [""],
-                "romanji": ""
-            },
-            "overview": {
-                "style": "",
-                "description": [
-                    "Non-caffinated herbal tea that is often roasted, Where?."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?tea", "random"],
-            },
-            "brewing": {
-                "withEquipment": ["tea cup", "brew basket"],
-                "style": ["simple"],
-                "description": [
-                    "Brewing with realitivly long steeps yields a simple experience."
-                ],
-                "image": ["https://source.unsplash.com/random/300x300/?teacup", "random"],
-                "servingSizeGramsTsp": [7],
-                "brewingTempF": [212],
-                "waterMl": 250,
-                "numberOfBrews": 4,
-                "concatArrToStingSeconds": [60, 120, 180, 360]
-            },
-            "equipment": {}
-        }
-    ]
-}
+    "overview": {
+        "style": ["Roasted", "Green"],
+        "description": [
+            "Roasting lower quality and old tea renews it's vitality and develops flavor and aroma."
+        ],
+        "image": ["images/roasted-slides/tea/green/hojicha.jpg", "random"],
+    },
+    "brewing": {
+        "withEquipment": ["tea cup", "brew basket"],
+        "style": ["simple"],
+        "description": [
+            "Brewing with realitivly long steeps yields a simple experience."
+        ],
+        "image": ["images/roasted-slides/tea/green/hojicha.jpg", "random"],
+        "servingSizeGramsTsp": [1.5, 1],
+        "brewingTempF": [205, 212],
+        "waterMl": 250,
+        "numberOfBrews": 2,
+        "concatArrToStingSeconds": [180, 180]
+    },
+    "equipment": {}
+},
+{
+    "name": {
+        "english": "Sencha",
+        "chinese": "煎茶",
+        "pinyin": "jiānchá",
+        "japanese": ["煎茶"],
+        "romanji": "sencha"
+    },
+    "overview": {
+        "style": "Green",
+        "description": [
+            "Early season unshaded steamed green tea from Japan."
+        ],
+        "image": ["images/roasted-slides/tea/green/green-sencha2.jpg", "random"],
+    },
+    "brewing": {
+        "withEquipment": ["tea cup", "brew basket"],
+        "style": ["simple"],
+        "description": [
+            "Brewing with realitivly long steeps yields a simple experience."
+        ],
+        "image": ["images/roasted-slides/tea/green/green-sencha2.jpg", "random"],
+        "servingSizeGramsTsp": [1.5, 1],
+        "brewingTempF": [165, 175],
+        "waterMl": 250,
+        "numberOfBrews": 3,
+        "concatArrToStingSeconds": [30, 45, 60]
+    },
+    "equipment": {}
+},
+{
+    "name": {
+        "english": "Yancha",
+        "chinese": "岩茶",
+        "pinyin": "yān chá",
+        "japanese": ["ヤンチャ"],
+        "romanji": "yancha"
+    },
+    "overview": {
+        "style": "",
+        "description": [
+            "Roasted wulong from the Wuyi Mountains of Fujian, China."
+        ],
+        "image": ["images/roasted-slides/tea/wulong/rougui.jpg", "random"],
+    },
+    "brewing": {
+        "withEquipment": ["tea cup", "brew basket"],
+        "style": ["simple"],
+        "description": [
+            "Brewing with realitivly long steeps yields a simple experience."
+        ],
+        "image": ["images/roasted-slides/tea/wulong/rougui.jpg", "random"],
+        "servingSizeGramsTsp": [7],
+        "brewingTempF": [212],
+        "waterMl": 250,
+        "numberOfBrews": 4,
+        "concatArrToStingSeconds": [300, 300]
+    },
+    "equipment": {}
+},
+{
+    "name": {
+        "english": "Barley Tea",
+        "chinese": "",
+        "pinyin": "",
+        "japanese": [""],
+        "romanji": ""
+    },
+    "overview": {
+        "style": "",
+        "description": [
+            "Non-caffinated herbal tea that is often roasted, Where?."
+        ],
+        "image": ["images/roasted-slides/tea/tisane/mugicha.jpg", "random"],
+    },
+    "brewing": {
+        "withEquipment": ["tea cup", "brew basket"],
+        "style": ["simple"],
+        "description": [
+            "Brewing with realitivly long steeps yields a simple experience."
+        ],
+        "image": ["images/roasted-slides/tea/tisane/mugicha.jpg", "random"],
+        "servingSizeGramsTsp": [7],
+        "brewingTempF": [212],
+        "waterMl": 250,
+        "numberOfBrews": 4,
+        "concatArrToStingSeconds": [60, 120, 180, 360]
+    },
+    "equipment": {}
+},
+{
+    "name": {
+        "english": "Buckwheat Tea",
+        "chinese": "",
+        "pinyin": "",
+        "japanese": [""],
+        "romanji": ""
+    },
+    "overview": {
+        "style": "",
+        "description": [
+            "Non-caffinated herbal tea that is often roasted, Where?."
+        ],
+        "image": ["images/roasted-slides/tea/tisane/sobacha.jpg", "random"],
+    },
+    "brewing": {
+        "withEquipment": ["tea cup", "brew basket"],
+        "style": ["simple"],
+        "description": [
+            "Brewing with realitivly long steeps yields a simple experience."
+        ],
+        "image": ["images/roasted-slides/tea/tisane/sobacha.jpg", "random"],
+        "servingSizeGramsTsp": [7],
+        "brewingTempF": [212],
+        "waterMl": 250,
+        "numberOfBrews": 4,
+        "concatArrToStingSeconds": [60, 120, 180, 360]
+    },
+    "equipment": {}
+}]
 
-teaArr = [];
-for (let i = 0; i < serving.teas.length; i++) {
-    teaArr.push(serving.teas[i]);
+let teaArr = [];
+for (let i = 0; i < teas.length; i++) {
+    teaArr.push(teas[i]);
 
-    let nameEnglish = teaArr[i].name.english;
-    let nameChinese = teaArr[i].name.chinese;
-    let namePinyin = teaArr[i].name.pinyin;
-    let nameJapanese = teaArr[i].name.japanese;
-    let nameRomanji = teaArr[i].name.romanji;
-
-    let overviewTeaStyle = teaArr[i].overview.style;
-    let overviewDescription = teaArr[i].overview.description;
-    let overviewImage = teaArr[i].overview.image;
-    // let overviewFirstDate = teaArr[i].overview.firstDate;
-    // let overviewFirstLocation = teaArr[i].overview.firstLocation;
-    // let overviewDates = teaArr[i].overview.dates;
-    // let overviewFacts = teaArr[i].overview.facts;
-
-    let brewingStyle = teaArr[i].brewing.style;
-    let brewingDescription = teaArr[i].brewing.description;
-    let brewingImage = teaArr[i].brewing.image;
-    let brewingWithEquipment = teaArr[i].brewing.withEquipment;
-    let brewingServingSizeGramsTsp = teaArr[i].brewing.servingSizeGramsTsp;
-    let brewingBrewingTempF = teaArr[i].brewing.brewingTempF;
-    let brewingWaterMl = teaArr[i].brewing.waterMl;
-    let brewingNumberOfBrews = teaArr[i].brewing.numberOfBrews;
-    let brewingBrewingTimesSeconds = teaArr[i].brewing.concatArrToStingSeconds;
-
+    const idName = teaArr[i].name.english.includes(" ")
+        ? teaArr[i].name.english.split(" ")[0]
+        : teaArr[i].name.english
+    
     let imageSection = document.createElement('section');
     let teaNameSection = document.createElement('section');
     let teaOverviewSection = document.createElement('section');
     let teaBrewingSection = document.createElement('section');
 
     imageSection.className = 'imageSection';
-    imageSection.id = 'image' + nameEnglish;
+    imageSection.id = 'image' + teaArr[i].name.english;
+    imageSection.setAttribute("data-background-image", teaArr[i].overview.image[0]);
     teaNameSection.className = 'teaNameSection';
-    teaNameSection.id = 'teaName' + nameEnglish;
+    teaNameSection.id = 'teaName' + teaArr[i].name.english;
+    teaNameSection.setAttribute("data-background-image", teaArr[i].overview.image[0]);
     teaOverviewSection.className = 'overviewSection';
-    teaOverviewSection.id = 'overview' + nameEnglish;
+    teaOverviewSection.id = 'overview' + teaArr[i].name.english;
+    teaOverviewSection.setAttribute("data-background-image", teaArr[i].overview.image[0]);
     teaBrewingSection.className = 'teaBrewingSection';
-    teaBrewingSection.id = 'teaBrewing' + nameEnglish;
+    teaBrewingSection.id = 'teaBrewing' + teaArr[i].name.english;
+    teaBrewingSection.setAttribute("data-background-image", teaArr[i].overview.image[0]);
 
     imageSection.innerHTML = `
-    <h1>${nameEnglish}</h1>
-    <img src="${overviewImage}" alt="image of ${nameEnglish}" />`
-    document.getElementById('Serving').appendChild(imageSection);
+    <h1 class="back">${teaArr[i].name.english}</h1>`
+    document.getElementById(idName).appendChild(imageSection);
 
     teaNameSection.innerHTML =`
 	<style>
@@ -217,26 +192,26 @@ for (let i = 0; i < serving.teas.length; i++) {
         width:50%;
     }
     </style>
-    <div>
+    <div class="back">
         <div class="teaNameContainer">
-            <img src="${overviewImage}" alt="image of ${nameEnglish}" />
+            <img src="${teaArr[i].overview.image[0]}" alt="image of ${teaArr[i].name.english}" />
             <div>    
-                <p> ${nameEnglish} </p>
-                <small>${overviewTeaStyle} tea</small>
-                <p><small>Chinese: ${nameChinese} (${namePinyin}) </small></p>
-                <p><small>Japanese: ${nameJapanese} (${nameRomanji}) </small></p>
+                <p> ${teaArr[i].name.english} </p>
+                <small>${teaArr[i].overview.style} tea</small>
+                <p><small>Chinese: ${teaArr[i].name.chinese} (${teaArr[i].name.pinyin}) </small></p>
+                <p><small>Japanese: ${teaArr[i].name.japanese} (${teaArr[i].name.romanji}) </small></p>
             </div>
         </div>
-        <p> ${overviewDescription} </p>
+        <p> ${teaArr[i].overview.description} </p>
     </div>
     `;
-    document.getElementById('Serving').appendChild(teaNameSection);
+    document.getElementById(idName).appendChild(teaNameSection);
 
     // teaOverviewSection.innerHTML =
     // `<h1>History</h1>
     // <p>First produced ${overviewFirstDate} in ${overviewFirstLocation}</p>
     // `;
-    // document.getElementById('Serving').appendChild(teaOverviewSection);
+    // document.getElementById(idName).appendChild(teaOverviewSection);
 
     let concatedStr = ""
     const concatArrToSting = (x, y) => {
@@ -264,26 +239,24 @@ for (let i = 0; i < serving.teas.length; i++) {
         left:1rem;
     }
     </style>
-    <div>
+    <div class="back">
         <div class="brewingContainer">
-            <img src="${brewingImage}" alt="image of ${nameEnglish}" />
+            <img src="${teaArr[i].brewing.image[0]}" alt="image of ${teaArr[i].name.english}" />
             <div>
-                <p> Using a ${brewingWithEquipment[0]} and ${brewingWithEquipment[1]} </p>
-                <p> ${brewingDescription} </p>
-                <small class="styleTag">#${brewingStyle}StyleBrewing</small>
+                <p> Using a ${teaArr[i].brewing.withEquipment[0]} and ${teaArr[i].brewing.withEquipment[1]} </p>
+                <p> ${teaArr[i].brewing.description} </p>
+                <small class="styleTag">#${teaArr[i].brewing.style}StyleBrewing</small>
             </div>
         </div>
-        <p>
-        Brew ${brewingServingSizeGramsTsp[0]} grams
-        <small>(${brewingServingSizeGramsTsp[1]} tsp)</small>
-        of ${nameEnglish} 
-        in ${brewingWaterMl} ml of water
-        at between ${brewingBrewingTempF[0]} °F and ${brewingBrewingTempF[1]} °F
-        ${brewingNumberOfBrews} times.
-        ${concatArrToSting(brewingNumberOfBrews, brewingBrewingTimesSeconds)}
+        <p>[0]} grams[1]} tsp)</small>
+        of ${teaArr[i].name.english} 
+        in ${teaArr[i].brewing.waterMl} ml of water
+        at between ${teaArr[i].brewing.brewingTempF[0]} °F and ${teaArr[i].brewing.brewingTempF[1]} °F
+        ${teaArr[i].brewing.numberOfBrews} times.
+        ${concatArrToSting(teaArr[i].brewing.numberOfBrews, teaArr[i].brewing.concatArrToStingSeconds)}
         </p>
     </div>
     `;
-    document.getElementById('Serving').appendChild(teaBrewingSection);
+    document.getElementById(idName).appendChild(teaBrewingSection);
 
 }
